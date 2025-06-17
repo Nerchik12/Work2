@@ -1,0 +1,8 @@
+<h2>Зарегистрированные сотрудники</h2>
+<ul>
+
+    {% for emp in employees %}
+    <li>{{ emp[1] }} ({{ emp[2] }})</li>
+    {% endfor %}
+    
+</ul>

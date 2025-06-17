@@ -1,0 +1,26 @@
+<table>
+
+    <thead>
+        <tr>
+
+            <th>ID</th>
+            <th>Сотрудник</th>
+            <th>Время</th>
+            <th>Действие</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        {% for log in logs %}
+        <tr>
+
+            <td>{{ log[0] }}</td>
+            <td>{{ log[1] }}</td>
+            <td>{{ log[2] }}</td>
+            <td>{{ 'Вход' if log[3] == 'in' else 'Выход' }}</td>
+            
+        </tr>
+        {% endfor %}
+    </tbody>
+
+</table>

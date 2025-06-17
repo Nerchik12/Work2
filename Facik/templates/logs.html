@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Журнал посещений</h1>
+
+<form hx-get="/logs" hx-target="#log-table">
+    <input type="date" name="date">
+    <button type="submit">Фильтровать</button>
+</form>
+
+<table id="log-table" hx-get="/logs" hx-trigger="load, every 10s">
+    <!-- Таблица логов появится здесь -->
+</table>
+{% endblock %}

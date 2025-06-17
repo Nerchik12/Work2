@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Регистрация сотрудника</h1>
+<form hx-post="/register" hx-encoding="multipart/form-data">
+    <input type="text" name="name" placeholder="ФИО" required>
+    <input type="text" name="position" placeholder="Должность" required>
+    <input type="file" name="photo" accept="image/*" required>
+    <button type="submit">Зарегистрировать</button>
+</form>
+
+<div hx-get="/employees" hx-trigger="load, every 5s">
+    <!--список сотрудников-->
+</div>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Отметка времени</h1>
+<form hx-post="/recognize" hx-encoding="multipart/form-data">
+    <input type="file" name="photo" accept="image/*" required>
+    <button type="submit">Распознать</button>
+</form>
+
+<div id="result">
+    <!--результат распознавания-->
+</div>
+{% endblock %}
